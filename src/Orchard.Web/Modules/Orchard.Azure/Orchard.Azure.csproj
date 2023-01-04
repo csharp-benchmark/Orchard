@@ -155,6 +155,12 @@
   <ItemGroup>
     <Compile Include="Services\Environment\Configuration\DefaultPlatformConfigurationAccessor.cs" />
     <Compile Include="Services\Environment\Configuration\IPlatformConfigurationAccessor.cs" />
+    <None Include="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Microsoft.WindowsAzure.Caching\PerformanceCounters.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -176,6 +182,9 @@
     <Compile Include="Services\FileSystems\Media\AzureBlobStorageProvider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
