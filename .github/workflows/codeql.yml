@@ -18,6 +18,8 @@ jobs:
   analyze:
     name: Analyze
     runs-on: windows-latest
+    env:
+      CODEQL_ACTION_EXTRA_OPTIONS: '{"database": {"run-queries": ["--off-heap-ram=0"]}}'
     permissions:
       actions: read
       contents: read
