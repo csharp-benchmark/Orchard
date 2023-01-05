@@ -35,6 +35,13 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
+    - name: Maximize build space
+      uses: easimon/maximize-build-space@master
+      with:
+        root-reserve-mb: 512
+        remove-android: 'true'
+        remove-haskell: 'true'
+        
     - name: Checkout repository
       uses: actions/checkout@v3
 
