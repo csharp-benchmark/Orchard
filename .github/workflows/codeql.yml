@@ -65,7 +65,7 @@ jobs:
 
     - run: |
        echo "Run, Build Application using script"
-       MSBuild src\Orchard.sln -t:restore,build -p:RestorePackagesConfig=true
+       MSBuild src\Orchard.sln -m -t:restore,build -p:RestorePackagesConfig=true
        MSBuild src\Orchard.sln -t:clean
 
     - name: Perform CodeQL Analysis
