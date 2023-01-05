@@ -65,7 +65,7 @@ jobs:
 
     - run: |
        echo "Run, Build Application using script"
-       MSBuild src\Orchard.sln
+       MSBuild src\Orchard.sln -t:restore,build -p:RestorePackagesConfig=true
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
